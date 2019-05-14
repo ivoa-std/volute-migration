@@ -48,7 +48,28 @@ directory (the example uses ADQL as repository)::
     $ git push --set-upstream origin master --tags
 
 
-4. Remove the document from volute
+4. Add the ivoatex git module
+-----------------------------
+
+The ivoatex package should be included as a git submodule::
+
+    $ cd ADQL
+    $ git submodule add https://github.com/ivoa-std/ivoatex
+    $ git commit -m "Add ivoatex submodule"
+    $ git push
+
+The git module does not support Subversion tags. They must be removed
+from the LaTeX file::
+
+    $ sed -i '/^\\SVN\$/d' -i ADQL.tex 
+    $ git commit -m "Remove supported SVN tags" ADQL.tex
+    $ git push
+
+Keep in mind to use the ``--recurse-submodules`` option when cloning
+the repository.
+
+
+5. Remove the document from volute
 ----------------------------------
 
 To avoid confusion which repository to use for further development, it
