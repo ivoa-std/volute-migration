@@ -1,5 +1,6 @@
-Convert a document from Volute (Subversion) to Github
-=====================================================
+=======================================================
+ Convert a document from Volute (Subversion) to Github
+=======================================================
 
 While Volute has a hierarchical structure (WG/Document), Github
 provides no further hierarchy. Therefore, each document will go into a
@@ -7,7 +8,7 @@ separate repository directly under the ivoa-std organization.
 
 
 1. Get the conversion script
-----------------------------
+============================
 
 ::
 
@@ -15,7 +16,7 @@ separate repository directly under the ivoa-std organization.
     $ chmod +x convert.sh
 
 2. Convert the repository structure to git
-------------------------------------------
+==========================================
 
 ::
 
@@ -27,10 +28,19 @@ and tags are left out. The commit authors are converted with the file
 `volute-users.txt.in` (slightly scrambled to confuse email scrapers).
 
 I would then recommend to create tags for the versions (WD, PR, REC)
-of the standard, in the syntax::
+of the standard, in the syntax:
 
-    v<version>_<status><release>
-    v2.1_pr1
++------------------------+-------------------------+
+| ``v0.1_20141008``      | Internal Draft          |
++------------------------+-------------------------+
+| ``v1.0_20150515-note`` | Note                    |
++------------------------+-------------------------+
+| ``v2.1_20170923-wd``   | Working Draft           |
++------------------------+-------------------------+
+| ``v2.1_20180112-pr``   | Proposed Recommendation |
++------------------------+-------------------------+
+| ``v2.1``               | Recommendation          |
++------------------------+-------------------------+
 
 These can be converted into github "Releases" which allow add PDF,
 HTML and other files, making it easier to have everything
@@ -38,7 +48,7 @@ well-structured in one place.
 
 
 3. Create a github repository and push
---------------------------------------
+======================================
 
 Now create a repository on https://github.com/ivoa-std/. This requires
 that you are in the ivoa-std organization. Then push the converted
@@ -50,7 +60,7 @@ directory (the example uses ADQL as repository)::
 
 
 4. Add the ivoatex git module
------------------------------
+=============================
 
 The ivoatex package should be included as a git submodule::
 
@@ -71,7 +81,7 @@ the repository.
 
 
 5. Remove the document from volute
-----------------------------------
+==================================
 
 To avoid confusion which repository to use for further development, it
 is strongly recommended to replace the document directory on volute
