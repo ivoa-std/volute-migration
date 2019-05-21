@@ -12,6 +12,7 @@ separate repository directly under the ivoa-std organization.
 ::
 
     $ wget https://raw.githubusercontent.com/ivoa-std/volute-migration/master/convert.sh
+    $ chmod +x convert.sh
 
 2. Convert the repository structure to git
 ------------------------------------------
