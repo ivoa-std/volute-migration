@@ -58,6 +58,10 @@ git svn clone ${SVNBASE}/${PROJECT} --authors-file=${AUTHORSFILE} --no-metadata
 
 cd ${REPO}
 
+curl https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt > LICENSE
+git add LICENSE
+git commit -m "Include CC-BY-SA-4.0 license"
+
 cat <<EOF
 Now create a repository ${REPO} on https://github.com/${GITHUB_USER}/. 
 Then, push the converted directory:
