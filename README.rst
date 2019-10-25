@@ -46,6 +46,12 @@ These can be converted into github "Releases" which allow add PDF,
 HTML and other files, making it easier to have everything
 well-structured in one place.
 
+This script will also add the recommended `CC-BY-SA 4.0
+license <LICENSE>`_ to the repository. This license lets others remix,
+tweak, and build upon your work even for commercial purposes, as long
+as they credit you and license their new creations under the identical
+terms.
+
 
 3. Create a github repository and push
 ======================================
